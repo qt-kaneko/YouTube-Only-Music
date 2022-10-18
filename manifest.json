@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Only Music",
+  "version": "1.0.0",
+
+  "description": "Load only audio on YouTube Music.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://music.youtube.com/*"],
+      "js": ["./logic.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://music.youtube.com/*"],
+      "js": ["./design.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
